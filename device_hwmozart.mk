@@ -5,14 +5,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/huawei/hwgra/hwgra-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/hwmozart/hwmozart-vendor.mk)
 
 PRODUCT_PACKAGE_OVERLAYS += \
-	device/huawei/hwgra/overlay
+	device/huawei/hwmozart/overlay
 
 #Dalvik & memory
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 #Lights
 PRODUCT_PACKAGES += lights.hi3635
@@ -210,8 +210,8 @@ $(BOOT_RAMDISK_SRC)/sbin/hw_ueventd:$(BOOT_RAMDISK_DST)/sbin/hw_ueventd
 #$(call inherit-product, build/target/product/full.mk) #we don't want to build emulator stuff
 
 
-PRODUCT_DEVICE:=hwgra
-PRODUCT_NAME:=full_hwgra
+PRODUCT_DEVICE:=hwmozart
+PRODUCT_NAME:=full_hwmozart
 PRODUCT_BRAND:=HUAWEI
-PRODUCT_MODEL:=HUAWEI GRA-L09
+PRODUCT_MODEL:=HUAWEI M2-801LC100
 PRODUCT_MANUFACTURER:=HUAWEI
