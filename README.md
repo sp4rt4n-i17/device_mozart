@@ -2,7 +2,7 @@ This is a work in progress as I'm very new to ROM development.
 
 
 
-@Copyright 2017 - The LineageOS / Cyanogenmod Project
+@Copyright 2018 - The LineageOS / Cyanogenmod Project
 
 Huawei Mediapad M2 801L detailed specifications:
 ======================================
