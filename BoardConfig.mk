@@ -1,7 +1,7 @@
 #Assert
-TARGET_OTA_ASSERT_DEVICE := hi3635,GRA-L09,hwgra,HWGRA,gra_l09,huawei_p8,ascend_p8,P8,grace,GRACE
+TARGET_OTA_ASSERT_DEVICE := hi3635,hwmozart,HWMozart,huawei_mediapad_m2,mozart,MOZART,M2-801LC100
 
-LOCAL_PATH := device/huawei/hwgra
+LOCAL_PATH := device/huawei/hwmozart
 
 #CM Hardware abstraction
 BOARD_USES_CYANOGEN_HARDWARE := true
@@ -19,7 +19,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 
 #Build
-DEVICE_FOLDER = device/huawei/hwgra
+DEVICE_FOLDER = device/huawei/hwmozart
 
 #USE JAVA 8 (EXPERIMENTAL)
 EXPERIMENTAL_USE_JAVA8 := true
@@ -71,9 +71,9 @@ TARGET_USES_ION := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 #NFC
-TARGET_USES_NQ_NFC := true
-BOARD_NFC_CHIPSET := pn547
-NXP_CHIP_TYPE := 1
+#TARGET_USES_NQ_NFC := true
+#BOARD_NFC_CHIPSET := pn547
+#NXP_CHIP_TYPE := 1
 
 #GPU
 TARGET_BOARD_GPU := mali-t628
@@ -117,7 +117,7 @@ BOARD_LEGACY_NL80211_STA_EVENTS := true
 BOARD_NO_APSME_ATTR := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/vnd_hwgra.conf
+BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/vnd_hwmozart.conf
 
 
 #CPU/ARCH
@@ -169,7 +169,7 @@ TARGET_KERNEL_CONFIG :=merge_hi3635_defconfig
 HAVE_SELINUX := true
 
 #Kernel Config
-BOARD_KERNEL_CMDLINE := androidboot.hardware=hi3635 androidboot.selinux=permissive no_console_suspend=1 mem=3072M coherent_pool=512K mmcparts=mmcblk0:p1(vrl),p2(vrl_backup),p6(modemnvm_factory),p9(splash),p10(modemnvm_backup),p11(modemnvm_img),p12(modemnvm_system),p14(3rdmodemnvm),p15(3rdmodemnvmback),p17(modem_om),p20(modemnvm_update),p30(modem),p31(modem_dsp),p32(dfx),p33(3rdmodem) cpuidle_sysfs_switch=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=hi3635 androidboot.selinux=permissive no_console_suspend=1 mem=2048M coherent_pool=512K mmcparts=mmcblk0:p1(vrl),p2(vrl_backup),p6(modemnvm_factory),p9(splash),p10(modemnvm_backup),p11(modemnvm_img),p12(modemnvm_system),p14(3rdmodemnvm),p15(3rdmodemnvmback),p17(modem_om),p20(modemnvm_update),p30(modem),p31(modem_dsp),p32(dfx),p33(3rdmodem) cpuidle_sysfs_switch=1
 BOARD_KERNEL_BASE := 0x00678000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x07588000 --tags_offset 0xffb88000
@@ -260,7 +260,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-huawei
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchscreen/wakeup_gesture_enable"
 
 # inherit from the proprietary version
--include vendor/huawei/hwgra/BoardConfigVendor.mk
+-include vendor/huawei/hwmozart/BoardConfigVendor.mk
 
 
 
